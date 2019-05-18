@@ -65,7 +65,9 @@ lengthCols = len(a[0])
 lengthRow = len(a)
 
 def winner():
+	lengthOfCols = lengthCols - 1
 	condition = True
+	standoffC = 0	# standoff count
 	while condition:
 		mylistX = [] 	# for diagonal player 1
 		mylistO = []	# for diagonal player 2
@@ -84,30 +86,34 @@ def winner():
 			if 'X' in a[i][i]:
 				mylistX.append(a[i][i])
 				countX = mylistX.count('X')
-		if countX == 3:
-			print('\tWinner player1')
-			condition = False
-			return 'Congradulations'
+				if countX == 3:
+					print('\tWinner player1')
+					condition = False
+					return 'Congradulations'
 
-		for i in range(lengthRow -1, -1, -1):						# Winner to diagonal 2
-			if 'X' in a[i][i]:
-				listX.append(a[i][i])
-				cX = listX.count('X')
-		if cX == 3:
-			print('\tWinner player1')
-			condition = False
-			return 'Congradulations'
+		for i in range(lengthCols):									 # winner to diagonal 2
+			if 'X' in a[i][lengthOfCols]:
+				if lengthOfCols == -1:
+					print('\tWinner player1')
+					condition = False
+					return 'Congradulations'
+				lengthOfCols -= 1
 
-		for i in range(lengthRow):
+		for i in range(lengthRow):									# winner to columns
 			for j in range(lengthCols):
 				if 'X' in a[j][i] and 'O' not in a[j][i] and '*' not in a[j][i]:
 					colsX.append('X')
 					countcolX = colsX.count('X')
+					if countcolX == 3:
+						print('\tWinner player1')
+						condition = False
+						return 'Congradulations'
 			colsX = []
-		if countcolX == 3:
-			print('\tWinner player1')
-			condition = False
-			return 'Congradulations'
+		
+		standoffC += 1
+		if standoffC == 9:
+			print('GAME is Standoff')
+			return "StandOff"
 
 		##### Player 2  winners	
 		player_two()
@@ -121,29 +127,34 @@ def winner():
 			if 'O' in a[i][i]:
 				mylistO.append(a[i][i])
 				countO = mylistO.count('O')
-		if countO == 3:
-			print('\tWinner player2')
-			condition = False
-			return 'Congradulations'
+				if countO == 3:
+					print('\tWinner player2')
+					condition = False
+					return 'Congradulations'
 		
-		for i in range(lengthRow -1, -1, -1):
-			if 'O' in a[i][i]:
-				listO.append(a[i][i])
-				cO = listO.count('O')
-		if cO == 3:
-			print('\tWinner player2')
-			condition = False
-			return 'Congradulations'
 		
+		for i in range(lengthCols):	
+			if 'O' in a[i][lengthOfCols]:
+				if lengthOfCols == -1:
+					print('\tWinner player2')
+					condition = False
+					return 'Congradulations'
+				lengthOfCols -= 1
+
 		for i in range(lengthRow):
 			for j in range(lengthCols):
 				if 'O' in a[j][i] and 'X' not in a[j][i] and '*' not in a[j][i]:
-					colsO.append('X')
+					colsO.append('O')
 					countcolO = colsO.count('O')
+					if countcolO == 3:
+						print('\tWinner player2')
+						condition = False
+						return 'Congradulations'
 			colsO = []
-		if countcolO == 3:
-			print('\tWinner player2')
-			condition = False
-			return 'Congradulations'
+
+		standoffC += 1
+		if standoffC == 9:
+			print('GAME is Standoff')
+			return "StandOff"
 
 winner()	
