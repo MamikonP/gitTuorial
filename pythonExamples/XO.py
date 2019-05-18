@@ -65,7 +65,7 @@ lengthCols = len(a[0])
 lengthRow = len(a)
 
 def winner():
-	lengthOfCols = lengthCols - 1
+	lengthOfColsX = lengthOfColsY = lengthCols - 1
 	condition = True
 	standoffC = 0	# standoff count
 	while condition:
@@ -91,13 +91,13 @@ def winner():
 					condition = False
 					return 'Congradulations'
 
-		for i in range(lengthCols):									 # winner to diagonal 2
-			if 'X' in a[i][lengthOfCols]:
-				if lengthOfCols == -1:
-					print('\tWinner player1')
+		for i in range(lengthCols-1):									 # winner to diagonal 2
+			if 'X' in a[i][lengthOfColsX]:
+				if lengthOfColsX == -1:
+					print('\tWinner player1aa')
 					condition = False
 					return 'Congradulations'
-				lengthOfCols -= 1
+				lengthOfColsX -= 1
 
 		for i in range(lengthRow):									# winner to columns
 			for j in range(lengthCols):
@@ -133,13 +133,13 @@ def winner():
 					return 'Congradulations'
 		
 		
-		for i in range(lengthCols):	
-			if 'O' in a[i][lengthOfCols]:
-				if lengthOfCols == -1:
-					print('\tWinner player2')
+		for i in range(lengthCols-1):	
+			if 'O' in a[i][lengthOfColsY]:
+				if lengthOfColsY == -1:
+					print('\tWinner player2aa')
 					condition = False
 					return 'Congradulations'
-				lengthOfCols -= 1
+				lengthOfColsY -= 1
 
 		for i in range(lengthRow):
 			for j in range(lengthCols):
