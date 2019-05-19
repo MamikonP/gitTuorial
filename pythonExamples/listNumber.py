@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+###	Task ### 
+### unenq list 5 kamayakan tverov, stanal myus list@ aynpes, vor lini index@ nranic hajord ev naxord tveri gumar@, 
+# indexneri arajin ev verjin tver@ gumarel (hajord ev verjin/naxor ev arajin) tverin
+
+
 list1 = list()
 print("Enter five element for list")
 
