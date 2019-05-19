@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+#	Task	#
+#	It's polichudes. You can answer the question "Who is Windows creator?", every true answer word is show you
+
 name = "BillGates"
 i = 0
 mylist = []
