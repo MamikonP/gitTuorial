@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+#	Task	#
+#	This game is X and O. Player 1 is X, Player 2 is O`
+
 a = []
 def board(bvalue = '*'):
 	for i in range(3):

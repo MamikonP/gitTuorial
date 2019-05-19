@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+#	Task	#
+#	You should write five-digit number and you can show in reverse
 
 while True:
 	number = int(input("Введите пятизначное число: "))

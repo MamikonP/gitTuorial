@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+#	Task	#
+#	In database have 3 username and 3 password, you can log in input true data. Or you can register 
+
 mylist = {}
 usersLogin = {'John':'1234', 'Jack':'5678', 'Jim':'9876'}
 mylist = usersLogin
