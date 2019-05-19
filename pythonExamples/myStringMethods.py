@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
-mystring = "Welcome to 1 Armenia, 2 My name 44 is Mamikon,55 I live in Gyumri"
+################## Task - my string methods
 
+mystring = "Welcome to 1 Armenia, 2 My name 44 is Mamikon,55 I live in Gyumri"
 def my_count(string, symbol):
 	count = 0
-	for i in range(len(string)):
-		if string[i].upper() == symbol.upper():
+	for i in string:
+		if ord(i) == ord(symbol) - 32 or i == symbol:
 			count += 1
 	return count
 
@@ -13,22 +14,26 @@ def my_count(string, symbol):
 
 
 def my_find(string, symbol):
-	for i in range(len(string)):
-		if string[i].upper() == symbol.upper():
-			print(string[i],'->',i)
+	count = 0
+	for i in string:
+		if i == symbol or ord(i) == ord(symbol) -32:
+			print(i,'->',count)
+		count += 1
 
-#myfind(my_string, 'm')
-###############################################################
+#my_find(mystring, 'm')
 
 def my_replace(string, sourceSymbol, replaceSymbol):
-	for i in range(len(string)):
-		if string[i].upper() == sourceSymbol.upper():
-			string[i] = replaceSymbol
+	my_list = []
+	index = 0
+	for i in string:
+		my_list.append(i)
+	for i in my_list:
+		if i == sourceSymbol or ord(i) == ord(sourceSymbol) - 32:
+			my_list[index] = replaceSymbol
+		index += 1
+	return my_list
 
-	return string
-
-#print(my_replace(mystring, 'm', "e"))
-###############################################################
+#print(my_replace(mystring, 'm', 'e'))
 
 def my_isalpha(string):
 	for i in string:
@@ -122,27 +127,24 @@ def my_lower(string):
 	print('\n')
 
 #my_lower(mystring)
-#######################################
+
 def my_capitalize(string):
-	arr = []
+	my_list = []
 	str1 = ''
 	for i in string:
 		if i != ' ':
-			str1 += i
+			my_list.append(i)
+			if my_list[0] >= 'a' and my_list[0] <= 'z':
+				word = ord(my_list[0]) - 32
+				my_list[0] = chr(word)
+				str1 += my_list[0]
+			else:
+				str1 += i
 		else:
-			arr.append(str1)
-			str1 = ''
-	i = j = 0
-	while i <= len(arr):
-		if arr[i][j] >= 'a' and arr[i][j] <= 'z':
-			up = ord(arr[i][j]) - 32
-			el = chr(up)
-			arr[i][j] = el
-			print(arr[i], end='')
-		else:
-			print(arr[i], end ='')
-		i += 1
-		j += 1
+			str1 += ' '
+			my_list = []
+	print(str1)
 
-#my_capitalize(mystring)
-##########################################
+my_capitalize(mystring)
+
+
