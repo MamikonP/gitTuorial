@@ -1,22 +1,23 @@
 #!/usr/bin/python3
 
+#	TASK	#
+#	Read the .txt file and write in .xlsx file with argparse
+
 try:
 	import xlsxwriter
+	import argparse
 except ImportError:
 	print("No such module")
 
-import argparse
 
 parse = argparse.ArgumentParser()
 parse.add_argument('-f', '--file', required = True, help = '(-f/--file) filename.txt')
 parse.add_argument('-d', '--document', required = True, help = '(-d/--document) filename.xlsx')
 args = vars(parse.parse_args())
 
-#xlsx_file = input('Enter the name of the .xlsx file:\t')	
 workbook = xlsxwriter.Workbook(args["document"])
 worksheet = workbook.add_worksheet()
 
-#read_file = input('Enter the name of the .txt file:\t')
 cell_format = workbook.add_format({'bg_color':'red'})
 
 f = open(args["file"])
