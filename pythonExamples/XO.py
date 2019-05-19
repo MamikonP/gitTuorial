@@ -91,12 +91,13 @@ def winner():
 					condition = False
 					return 'Congradulations'
 
-		for i in range(lengthCols-1):									 # winner to diagonal 2
+		for i in range(lengthOfColsX, -1, -1):									 # winner to diagonal 2
 			if 'X' in a[i][lengthOfColsX]:
 				if lengthOfColsX == -1:
 					print('\tWinner player1aa')
 					condition = False
 					return 'Congradulations'
+				print(lengthOfColsX)
 				lengthOfColsX -= 1
 
 		for i in range(lengthRow):									# winner to columns
@@ -133,12 +134,13 @@ def winner():
 					return 'Congradulations'
 		
 		
-		for i in range(lengthCols-1):	
+		for i in range(lengthOfColsY, -1, -1):	
 			if 'O' in a[i][lengthOfColsY]:
 				if lengthOfColsY == -1:
 					print('\tWinner player2aa')
 					condition = False
 					return 'Congradulations'
+				print(lengthOfColsY)
 				lengthOfColsY -= 1
 
 		for i in range(lengthRow):
