@@ -6,8 +6,8 @@ mydict = {}
 def createKeyValue():
 	condition = True
 	while condition:
-		keyEnter = input('Enter keys for dictionary: ')
-		if keyEnter != '/':
+		keyEnter = input('Enter keys for dictionary(. - to exit): ')
+		if keyEnter != '.':
 			keys.append(keyEnter)
 			print(keys)
 		else:
@@ -16,8 +16,8 @@ def createKeyValue():
 	
 	condition = True	
 	while condition:
-		valueEnter = input('Enter values for dictionary: ')
-		if valueEnter != '/':
+		valueEnter = input('Enter values for dictionary(. - to exit): ')
+		if valueEnter != '.':
 			values.append(valueEnter)
 			print(values)
 		else:
@@ -25,6 +25,11 @@ def createKeyValue():
 	print('values -> ',values)
 
 	mydict = dict.fromkeys(keys)
+	
+	if len(keys) > len(values):
+		difference = len(keys) - len(values)	
+		for i in range(difference):
+			values.append('None')
 
 	i = 0
 	for key in mydict:
