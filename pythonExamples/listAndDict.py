@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+#	Task	#
+#	You have empty dictionary. Add keys and values in dictionary, if keys is grather than values, that keys will be None
+
 keys = []
 values = []
 mydict = {}
