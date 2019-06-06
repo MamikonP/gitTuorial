@@ -51,30 +51,26 @@ int main()
 
 	printf("Before swap-------------------\n");
 	printf("h1->name = %s\t", Human.name);
-	printf("h2->name = %s\n", Human2.name);
-
 	printf("h1->age = %d\t", Human.age);
-	printf("h2->age = %d\n", Human2.age);
-
 	printf("h1->salary = %lld\t", Human.salary);
-	printf("h2->salary = %lld\n", Human2.salary);
+	printf("h1->weight = %f\n", Human.weight);
 
-	printf("h1->weight = %f\t", Human.weight);
+	printf("h2->name = %s\t", Human2.name);
+	printf("h2->age = %d\t", Human2.age);
+	printf("h2->salary = %lld\t", Human2.salary);
 	printf("h2->weight = %f\n", Human2.weight);
 
 	swap_struct(&Human, &Human2);
+
 	printf("\nAfter swap-------------------\n");
-	
 	printf("h1->name = %s\t", Human.name);
-	printf("h2->name = %s\n", Human2.name);
-
 	printf("h1->age = %d\t", Human.age);
-	printf("h2->age = %d\n", Human2.age);
-
 	printf("h1->salary = %lld\t", Human.salary);
-	printf("h2->salary = %lld\n", Human2.salary);
+	printf("h1->weight = %f\n", Human.weight);
 
-	printf("h1->weight = %f\t", Human.weight);
+	printf("h2->name = %s\t", Human2.name);
+	printf("h2->age = %d\t", Human2.age);
+	printf("h2->salary = %lld\t", Human2.salary);
 	printf("h2->weight = %f\n", Human2.weight);
 
 	return 0;	
