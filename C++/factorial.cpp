@@ -4,6 +4,7 @@ int main()
 {
 	using namespace std;
 
+	// factorial - loop for()
 	int number = 0;
 	cout << "Enter number:";
 	cin >> number;
@@ -12,6 +13,7 @@ int main()
 		fact *= i;
 	cout << number << "! = " << fact << endl;
 
+	// factorial - loop while()
 	number = 0;
 	fact = 1;
 	cout << "Enter number:";
