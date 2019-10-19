@@ -71,7 +71,7 @@ Server side
 		2. ./server “port number from 2000-65535”
 
 Client side	
-		1. cd folder of project and do “qmake -project”
+		1. cd folder of project and do (chmod 755 *) “qmake -project”
 		2. vim *.pro and add 2 lines: QT += widgets
                                           QT += gui;  after “INCLUDEPATH += .” line.
 		3. qmake *.pro
