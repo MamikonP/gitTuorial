@@ -1,10 +1,16 @@
+import 'dart:ui' as prefix0;
+
 import 'package:flutter/material.dart';
 int count = 0;
+String name = "";
+String pass = "";
 void main() {
   runApp(new MaterialApp(
+    debugShowCheckedModeBanner: false,
       home: HomePage(),
       routes: <String, WidgetBuilder>{
-        "/SecondPage": (BuildContext context) => new MyClass()
+        "/SecondPage": (BuildContext context) => new Registration(),
+        "/ThirdPage": (BuildContext context) => new MyClass()
       },
   ));
 }
@@ -14,7 +20,7 @@ class MyClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-          title: new Text("Choose a product",
+          title: new Text(name,
             textAlign: TextAlign.center,
             style: new TextStyle(
               color: Colors.white,
@@ -146,6 +152,46 @@ class HomePage extends StatelessWidget{
                   icon: Icon(Icons.add, color: Colors.blue,),
                   iconSize: 80.0,
                   onPressed: () {Navigator.of(context).pushNamed("/SecondPage");}
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Registration extends StatefulWidget {
+  @override
+  RegistrationState createState() => RegistrationState();
+}
+
+class RegistrationState extends State<Registration> {
+  final TextEditingController controller = new TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: new Text("Registration"), backgroundColor: Colors.amber
+      ),
+      body: new Container(
+        child: new Center(
+          child: new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new TextField(
+                decoration: InputDecoration(
+                  hintText: "Username",
+                  hintStyle: TextStyle(inherit: true)
+                ),
+                onSubmitted: (String str) {
+                  setState(() {
+                    name = str;
+                  });
+                  controller.text = "";
+                  {Navigator.of(context).pushNamed("/ThirdPage");}
+                },
+                controller: controller,
               ),
             ],
           ),
