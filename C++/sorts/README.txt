@@ -18,10 +18,10 @@ CONTENTS
 	swap.h					- This file declaration of swap function
 	swap.cpp				- This file realization of swap function
 	bubble_sort.cpp				- Realization of sort array "bubble sort"
-	counting_sort.cpp			- Realization of sort array "bubble sort"
-	insertion_sort.cpp			- Realization of sort array "bubble sort"
-	selection_sort.cpp			- Realization of sort array "bubble sort"
-	shell_sort.cpp				- Realization of sort array "bubble sort"
+	counting_sort.cpp			- Realization of sort array "counting sort"
+	insertion_sort.cpp			- Realization of sort array "insertion sort"
+	selection_sort.cpp			- Realization of sort array "selection sort"
+	shell_sort.cpp				- Realization of sort array "shell sort"
 	README.txt 				- This file
 4. Usage
 	filename.cpp
