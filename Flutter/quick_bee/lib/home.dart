@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -212,7 +211,7 @@ class MainContent extends StatelessWidget{
                 Row(
                   children: <Widget>[
                     Expanded(
-                      child: Text('Popular', style: TextStyle(fontSize: 20.0),),
+                      child: Text('Popular trending', style: TextStyle(fontSize: 20.0),),
                     ),
                     Expanded(
                       child: Text('View all', style: TextStyle(color: Color(0xFF2BD093)), textAlign: TextAlign.end,),
@@ -384,7 +383,7 @@ class MainContent extends StatelessWidget{
                 Row(
                   children: <Widget>[
                     Expanded(
-                      child: Text('Popular', style: TextStyle(fontSize: 20.0),),
+                      child: Text('Popular trending', style: TextStyle(fontSize: 20.0),),
                     ),
                     Expanded(
                       child: Text('View all', style: TextStyle(color: Color(0xFF2BD093)), textAlign: TextAlign.end,),

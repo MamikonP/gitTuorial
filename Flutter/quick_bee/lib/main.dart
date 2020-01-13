@@ -55,7 +55,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
                     alignment: Alignment.center,
                     children: <Widget>[
                       Transform(
-                        transform: Matrix4.translationValues(animation.value * width, 0.0, 0.0),
+                        transform: Matrix4.translationValues(0.0, animation.value * width, 0.0),
                         child: Container(
                           width: 60.0,
                           height: 60.0,
@@ -70,7 +70,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
                         ),
                       ),
                       Transform(
-                        transform: Matrix4.translationValues(animation.value * width * 4, 0.0, 0.0),
+                        transform: Matrix4.translationValues(animation.value * width, 0.0, 0.0),
                         child: Container(
                           margin: EdgeInsets.only(top:60.0, right: 50.0),
                           width: 60.0,
@@ -102,7 +102,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
                         ),
                       ),
                       Transform(
-                        transform: Matrix4.translationValues(animation.value * width * 12, 0.0, 0.0),
+                        transform: Matrix4.translationValues(0.0, animation.value * width * (-1), 0.0),
                         child: Container(
                           margin: EdgeInsets.only(left: 110.0, top: 40.0),
                           width: 60.0,
@@ -193,141 +193,6 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
           ),
         );
       }
-    );
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // Containers circulars in Stack
-            Stack(
-              alignment: Alignment.center,
-              children: <Widget>[
-                Container(
-                  width: 60.0,
-                  height: 60.0,
-                  child: Icon(
-                      Icons.local_offer,
-                      color: Colors.white,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50.0),
-                    color: Color(0xFF18D191)
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top:60.0, right: 50.0),
-                  width: 60.0,
-                  height: 60.0,
-                  child: Icon(
-                    Icons.home,
-                    color: Colors.white,
-                  ),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      color: Color(0xFFFC6A7F)
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 50.0, top: 60.0),
-                  width: 60.0,
-                  height: 60.0,
-                  child: Icon(
-                    Icons.local_car_wash,
-                    color: Colors.white,
-                  ),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      color: Color(0xFFFFCE56)
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 110.0, top: 40.0),
-                  width: 60.0,
-                  height: 60.0,
-                  child: Icon(
-                    Icons.location_on,
-                    color: Colors.white,
-                  ),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      color: Color(0xFF45E0EC)
-                  ),
-                ),
-                // *************************
-
-              ],
-            ),
-            // Quick Bee text
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text("Qucik Bee", style: TextStyle(fontSize: 30.0),),
-                )
-              ],
-            ),
-            // Sign in with email
-            Row(
-              children: <Widget>[
-                Expanded(
-                    child:Padding(
-                      padding: EdgeInsets.only(left: 20.0, right: 10.0, top: 80.0),
-                      child: GestureDetector(
-                        onTap: (){
-                          Navigator.of(context).pushNamed("/LoginPage");
-                        },
-                        child:Container(
-                          alignment: Alignment.center,
-                          height: 60.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            color: Color(0xFF18D191),
-                          ),
-                          child: Text("Sign in with Email", style: TextStyle(fontSize: 20.0, color: Colors.white),),
-                        )
-                      ),
-                    )
-                )
-              ],
-            ),
-            // Sign in with Facebook or Google
-            Row(
-              children: <Widget>[
-                Expanded(
-                    child:Padding(
-                      padding: EdgeInsets.only(left: 20.0, right: 5.0, bottom: 10.0, top: 10),
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 60.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xFF45E0EC),
-                        ),
-                        child: Text("FaceBook", style: TextStyle(fontSize: 20.0, color: Colors.white),),
-                      ),
-                    )
-                ),
-                Expanded(
-                    child:Padding(
-                      padding: EdgeInsets.only(left: 5.0, right: 10.0, bottom: 10.0, top: 10),
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 60.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xFFFC6A7F),
-                        ),
-                        child: Text("Google", style: TextStyle(fontSize: 20.0, color: Colors.white),),
-                      ),
-                    )
-                ),
-              ],
-            )
-          ],
-        ),
-      ),
     );
   }
 }
