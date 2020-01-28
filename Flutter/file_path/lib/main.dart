@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:flutter/foundation.dart';
 
 void main() => runApp(MaterialApp(
   title: "Reading and Writing to Storage",
@@ -68,7 +67,7 @@ class HomeState extends State<Home>{
             ),
             FutureBuilder<Directory>(
               future: _appDocDir,
-              builder: (BuildContext contec, AsyncSnapshot<Directory> snapshot){
+              builder: (BuildContext context, AsyncSnapshot<Directory> snapshot){
                 Text text = Text('');
                 if(snapshot.connectionState == ConnectionState.done){
                   if(snapshot.hasError){
