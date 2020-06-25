@@ -1,0 +1,114 @@
+{
+    "film_0" : [
+        {
+            "name" : "Batman: Gotham By Gaslight",
+            "comingDate" : 2018,
+            "price" : 0.0,
+            "genre" : "Fantastic",
+            "time" : "1:17:03",
+            "image" : "https://st.kp.yandex.net/im/poster/6/9/8/kinopoisk.ru-The-Dark-Knight-698680--o--.jpg",
+            "url" : "https://w85.zona.plus/movies/betmen-gotem-v-gazovom-svete"
+        }
+    ],
+    "film_1" : [
+        {
+            "name" : "X-Men",
+            "comingDate" : 2014,
+            "price" : 0.0,
+            "genre" : "Fantastic",
+            "time" : "2:11:35",
+            "image" : "https://i1.rozetka.ua/goods/11387498/76657740_images_11387498538.jpg",
+            "url" : "https://w85.zona.plus/movies/lyudi-iks-dni-minuvshego-budushchego"
+        }
+    ],
+
+    "film_2" : [
+        {
+            "name" : "Home Alone",
+            "comingDate" : 1990,
+            "price" : 15.0,
+            "genre" : "Comedy",
+            "time" : "1:42:53",
+            "image" : "https://movieselection.net/wp-content/uploads/2018/03/5Lo3sWuvbO4AnrAHYBgB5U1Opqd.jpg",
+            "url" : "https://w85.zona.plus/movies/odin-doma"
+        }
+    ],
+
+    "film_3" : [
+        {
+            "name" : "The Lords of the Ring",
+            "comingDate" : 1978,
+            "price" : 0.0,
+            "genre" : "Adventure",
+            "time" : "2:13:20",
+            "image" : "https://wallpapertag.com/wallpaper/full/a/7/7/410973-full-size-lord-of-the-rings-wallpaper-hd-1920x1080.jpg",
+            "url" : "https://w85.zona.plus/movies/vlastelin-kolets"
+        }
+    ],
+    "film_4" : [
+        {
+            "name" : "Ghost Rider",
+            "comingDate" : 2007,
+            "price" : 0.0,
+            "genre" : "Fantastic",
+            "time" : "2:03:25",
+            "image" : "https://fs.kinomania.ru/file/film_poster/6/aa/6aadca7bd86c4743e6724f9607256126.jpeg",
+            "url" : "https://w85.zona.plus/movies/prizrachnyi-gonshchik"
+        }
+    ],
+    "film_5" : [
+        {
+            "name" : "The One",
+            "comingDate" : 2001,
+            "price" : 0.0,
+            "genre" : "Thriller",
+            "time" : "1:27:19",
+            "image" : "https://tvguide1.cbsistatic.com/feed/1/590/thumbs/11827590_1300x1733.jpg",
+            "url" : "https://w85.zona.plus/movies/protivostoyanie"
+        }
+    ],
+    "film_6" : [
+        {
+            "name" : "Captain America",
+            "comingDate" : 1990,
+            "price" : 13.0,
+            "genre" : "Fantastic",
+            "time" : "1:38:04",
+            "image" : "https://simkl.in/posters/54/54511266f46d16be2_0.jpg",
+            "url" : "https://w85.zona.plus/movies/kapitan-amerika"
+        }
+    ],
+    "film_7" : [
+        {
+            "name" : "Fast And Furious 7",
+            "comingDate" : 2015,
+            "price" : 7.6,
+            "genre" : "Action",
+            "time" : "2:19:54",
+            "image" : "https://conversationsabouther.net/wp-content/uploads/2014/03/Fast-and-Furious.jpg",
+            "url" : "https://w85.zona.plus/movies/forsazh-7"
+        }
+    ],
+    "film_8" : [
+        {
+            "name" : "The 100",
+            "comingDate" : 2014,
+            "price" : 0.0,
+            "genre" : "Fantastic",
+            "time" : "00:41:25",
+            "image" : "https://webadamlari.com/wp-content/uploads/2019/08/wp1825215.jpg",
+            "url" : "https://w85.zona.plus/tvseries/sotnya/season-1"
+        }
+    ],
+    "film_9" : [
+        {
+            "name" : "Venom",
+            "comingDate" : 2018,
+            "price" : 3.1,
+            "genre" : "Fantastic",
+            "time" : "1:53:24",
+            "image" : "https://i.pinimg.com/originals/cf/91/ff/cf91ff587d94e3101311cce7c1454685.jpg",
+            "url" : "https://w85.zona.plus/movies/venom-2018"
+        }
+    ]
+}
